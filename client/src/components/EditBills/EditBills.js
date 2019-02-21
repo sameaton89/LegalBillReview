@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { parse } from 'querystring';
+import 'react-materialize';
+
 
 export default class EditBills extends Component {
 
@@ -182,8 +183,12 @@ export default class EditBills extends Component {
                                 checked={this.state.paid}
                                 value={this.state.paid}
                                 />
+
+ 
                         <label className="form-check-label" htmlFor="completedCheckbox">
-                          Paid
+                        <input type="checkbox" />
+
+                          <span>Paid</span>
                         </label>                        
                     </div>
 

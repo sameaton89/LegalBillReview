@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import "./assets/css/style.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CreateBills from "./components/CreateBills/CreateBills";
 import EditBills from "./components/EditBills/EditBills";
 import Bills from "./components/Bills/Bills";
 import Main from "./components/Main/Main"
+import SignIn from "./components/SignIn/SignIn";
 import Logo from "./assets/Logo.JPG";
-import BankNotes from "./components/Main/img/banknotes.jpg";
-import Coins from "./components/Main/img/coins.jpg";
 // import "./assets/css/materialize.css";
 // import "./assets/css/materialize.min.css";
 // import "./assets/css/style.css";
@@ -29,6 +29,9 @@ class App extends Component {
                 <li>
                     <Link to="/create" className="navbar-brand">Create Bills</Link>
                 </li>
+                <li>
+                    <Link to="/signin" className="navbar-brand">Sign In</Link>
+                </li>
               </ul>
               <ul id="nav-mobile" className="sidenav">
                 <li>
@@ -42,7 +45,7 @@ class App extends Component {
           <Route path="/bills" exact component={Bills} />
           <Route path="/edit/:id" component={EditBills} />
           <Route path="/create" component={CreateBills} />
-
+          <Route path="/signin" component={SignIn} />
 
         </div>
       </Router>

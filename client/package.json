@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
     "react": "^16.8.2",
+    "react-checkbox-group": "^4.0.1",
     "react-dom": "^16.8.2",
     "react-materialize": "^2.6.0",
     "react-parallax": "^2.1.0",
