@@ -4,31 +4,49 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CreateBills from "./components/CreateBills/CreateBills";
 import EditBills from "./components/EditBills/EditBills";
 import Bills from "./components/Bills/Bills";
+import Main from "./components/Main/Main"
+import Logo from "./assets/Logo.JPG";
+import BankNotes from "./components/Main/img/banknotes.jpg";
+import Coins from "./components/Main/img/coins.jpg";
+// import "./assets/css/materialize.css";
+// import "./assets/css/materialize.min.css";
+// import "./assets/css/style.css";
+
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link to="/" className="navbar-brand">Legal Bill Review</Link>
-            <div className="collpase navbar-collapse">
-              <ul className="navbar-nav mr-auto">
-                <li className="navbar-item">
-                  <Link to="/" className="nav-link">Show Bills</Link>
+        <div>
+          <nav className="white" role="navigation">
+            <div className="nav-wrapper container">
+            <Link to="/" className="navbar-brand">
+              <img src={Logo} height= "25px" alt="Unsplashed background img 2" /></Link>
+              <ul className="right hide-on-med-and-down">
+                <li>
+                    <Link to="/bills" className="navbar-brand">Show Bills</Link>
                 </li>
-                <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Create Bill</Link>
+                <li>
+                    <Link to="/create" className="navbar-brand">Create Bills</Link>
                 </li>
               </ul>
+              <ul id="nav-mobile" className="sidenav">
+                <li>
+                  <a href="#">Navbar Link</a>
+                </li>
+              </ul>
+              <a href="#" data-target="nav-mobile" className="sidenav-trigger"><i className="material-icons">menu</i></a>
             </div>
-          </nav>
-          <br/>
-          <Route path="/" exact component={Bills} />
+        </nav>
+          <Route path="/" exact component={Main} />
+          <Route path="/bills" exact component={Bills} />
           <Route path="/edit/:id" component={EditBills} />
           <Route path="/create" component={CreateBills} />
+
+
         </div>
       </Router>
+      
 
     );
   }

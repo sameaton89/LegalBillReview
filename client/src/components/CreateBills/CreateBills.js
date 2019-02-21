@@ -106,6 +106,7 @@ export default class CreateBills extends Component {
 
     render() {
         return (
+        <div className="container">
             <div style={{marginTop: 10}}>
                 <h3>Add New Bill</h3>
                 <form onSubmit={this.onSubmit}>
@@ -172,6 +173,7 @@ export default class CreateBills extends Component {
                     </div>
                 </form>
             </div>
+        </div>
         )
     }
 }

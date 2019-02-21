@@ -23,6 +23,68 @@
   color: #61dafb;
 }
 
+.navbar-brand {
+  color: black;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+
+h1 {
+ font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 76px;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: grey;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -31,3 +93,8 @@
     transform: rotate(360deg);
   }
 }
+
+.parallax{
+  position:static;
+}
+

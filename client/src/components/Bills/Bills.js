@@ -42,7 +42,7 @@ export default class Bills extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h3>Bills List</h3>
                 <table id="myTable" className="table table-striped tablesorter" style={{ marginTop: 20 }} >
                     <thead>

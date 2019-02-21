@@ -113,7 +113,7 @@ export default class EditBills extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h3 align="center">Update Bill</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group"> 

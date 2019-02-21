@@ -13,16 +13,22 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     
     <!-- <link rel="stylesheet" href="../index.css"/> -->
 
     <!-- load jQuery and tablesorter scripts -->
-    <script type="text/javascript" src="/path/to/jquery-latest.js"></script>
-    <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script>
+    <!-- <script type="text/javascript" src="/path/to/jquery-latest.js"></script>
+    <script type="text/javascript" src="/path/to/jquery.tablesorter.js"></script> -->
 
     <!-- tablesorter widgets (optional) -->
-    <script type="text/javascript" src="/path/to/jquery.tablesorter.widgets.js"></script>
+    <!-- <script type="text/javascript" src="/path/to/jquery.tablesorter.widgets.js"></script> -->
 
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -48,14 +54,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
+    <!-- <script>
       $(function() {
   $("#myTable").tablesorter();
 });
 $(function() {
   $("#myTable").tablesorter({ sortList: [[0,0], [1,0]] });
 });
-    </script>
+    </script> -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
 
   </body>
 </html>
