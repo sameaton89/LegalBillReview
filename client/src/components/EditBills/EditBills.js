@@ -175,7 +175,11 @@ export default class EditBills extends Component {
                     
 
                     <div className="form-check">
-                        <input  className="form-check-input"
+
+
+ 
+                        <label for="completedCheckbox" className="form-check-label" htmlFor="completedCheckbox">
+                        <input  className="fixed"
                                 id="completedCheckbox"
                                 type="checkbox"
                                 name="completedCheckbox"
@@ -183,11 +187,6 @@ export default class EditBills extends Component {
                                 checked={this.state.paid}
                                 value={this.state.paid}
                                 />
-
- 
-                        <label className="form-check-label" htmlFor="completedCheckbox">
-                        <input type="checkbox" />
-
                           <span>Paid</span>
                         </label>                        
                     </div>

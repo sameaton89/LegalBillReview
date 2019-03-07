@@ -1,26 +1,35 @@
 import React, { Component } from 'react';
+import fire from "./config/Fire";
+import Login from "./Login";
+import Home from "./Home";
 
-
-
-
-export default class SignIn extends Component {
-
-
-    render() {
-        return (
-            <div className="container">
-            <div id="login_dv" class="maindiv">
-            <input type="email" placeholder="Email" id="emil_field" />
-            <input type="password" placeholder="Password" id="passwod_field" />
-            <a class="waves-effect waves-light btn">Sign In</a>
-        </div>
-        <div id="user_d=iv" class="loggedin-div">
-            <p id="use_para">You're currently logged in</p>
-            <button onclick="logOut()">Logout</button>
-        </div>
-</div>
-
-        )
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {}
     }
+  }
+
+  componentDidMount() {
+    this.authListener();
+  }
+authListener() {
+  fire.auth().onAuthStateChanged((user) => {
+    if (user) {
+      this.setState({ user });
+    } else {
+      this.setState({ user: null });
+    }
+  });
+}
+  render() {
+    return (
+      <div className="App">
+        {this.state.user ? (<Home />) : (<Login />)}
+      </div>
+    );
+  }
 }
 
+export default App;
